@@ -4,13 +4,27 @@
   "description": "A simple cowsay application",
   "main": "index.js",
   "scripts": {
-    "start": "node tweet.js",
+    "cowsay": "./node_modules/.bin/carbon-now -l Carbon -s quote.txt",
+    "start": "npm run compile && node say.js",
+    "compile": "tsc say.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["cowsay", "cli"],
+  "keywords": [
+    "cowsay",
+    "cli"
+  ],
   "author": "Bruno Palma",
   "license": "MIT",
   "dependencies": {
-    "twitter-api-v2": "^1.16.3"
+    "@darkobits/lolcatjs": "^3.1.5",
+    "carbon-now-cli": "^2.0.0",
+    "color-name-list": "^10.22.0",
+    "cowsay": "^1.6.0",
+    "isomorphic-lolcat": "^0.3.0",
+    "twitter-api-v2": "^1.16.3",
+    "word-wrap": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.8"
   }
 }

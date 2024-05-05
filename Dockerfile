@@ -2,9 +2,7 @@
 FROM ubuntu:latest
 
 # Update the system and install necessary packages
-RUN apt-get update && apt-get install -y cowsay fortune lolcat
+RUN apt-get update && apt-get install -y cowsay fortune lolcat imagemagick
 
 # Set the default command for the container
-CMD /usr/games/fortune | /usr/games/cowsay | /usr/games/lolcat
-
-RUN fortune tech_quotes | cowsay | lolcat
+CMD /usr/games/fortune | /usr/games/cowsay | /usr/games/lolcat | /usr/games/imagemagick
