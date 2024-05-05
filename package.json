@@ -1,0 +1,16 @@
+{
+  "name": "cowsay",
+  "version": "1.0.0",
+  "description": "A simple cowsay application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node tweet.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cowsay", "cli"],
+  "author": "Bruno Palma",
+  "license": "MIT",
+  "dependencies": {
+    "twitter-api-v2": "^1.16.3"
+  }
+}
