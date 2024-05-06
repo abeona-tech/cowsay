@@ -1,4 +1,4 @@
-name: Scheduled Deployment every 5 minutes
+name: Daily 5pm tweet
 
 on:
   schedule:
