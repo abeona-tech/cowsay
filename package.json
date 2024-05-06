@@ -11,7 +11,7 @@
     "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert && npm run tweet",
     "convert": "node dist/convert.js",
     "say": "node dist/say.js",
-    "lolcat": "cat dist/quote.txt | lolcat --force > ./dist/lolcat.ansi",
+    "lolcat": "node dist/lolcat.js > ./dist/lolcat.ansi",
     "tweet": "node dist/tweet.js"
   },
   "keywords": [
@@ -21,14 +21,18 @@
   "author": "Bruno Palma",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^20.12.2",
     "ansi-to-html": "^0.7.2",
     "cowsay": "^1.6.0",
     "dotenv": "^16.4.5",
-    "jsdom": "^24.0.0",
+    "lolcatjs": "^2.4.3",
     "node-html-to-image": "^4.0.0",
+    "node-pty": "^1.0.0",
     "twitter-api-v2": "^1.16.3",
     "typescript": "^5.4.5",
     "word-wrap": "^1.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@types/lolcatjs": "^2.4.1"
   }
 }
