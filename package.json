@@ -4,10 +4,9 @@
   "description": "A simple cowsay application",
   "main": "index.js",
   "scripts": {
-    "cowsay": "./node_modules/.bin/carbon-now -l Carbon -s quote.txt",
-    "start": "npm run compile && node say.js",
-    "compile": "tsc say.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cowsay": "node ./node_modules/carbon-now-cli/dist/cli.js quote.txt -l -w 800 -h 400 -t png --save-as quote -p presentation --config .carbon-now.json",
+    "start": "ts-node say.ts && npm run cowsay",
+    "tweet": "ts-node tweet.ts"
   },
   "keywords": [
     "cowsay",
@@ -21,6 +20,7 @@
     "color-name-list": "^10.22.0",
     "cowsay": "^1.6.0",
     "isomorphic-lolcat": "^0.3.0",
+    "twitter-api-client": "^1.6.1",
     "twitter-api-v2": "^1.16.3",
     "word-wrap": "^1.2.5"
   },
