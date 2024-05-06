@@ -5,6 +5,10 @@
   "engines": {
     "node": "20.12.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meowso/cowsay"
+  },
   "scripts": {
     "clean": "rm -rf dist/**.*",
     "compile": "tsc",
@@ -16,9 +20,18 @@
   },
   "keywords": [
     "cowsay",
-    "cli"
+    "cli",
+    "lolcat",
+    "twitter",
+    "tweet",
+    "nodejs",
+    "typescript"
   ],
-  "author": "Bruno Palma",
+  "author": {
+    "name": "Bruno Palma",
+    "email": "cat@cowsay.co",
+    "url": "http://about.me/bruno_vop"
+  },
   "license": "MIT",
   "dependencies": {
     "ansi-to-html": "^0.7.2",

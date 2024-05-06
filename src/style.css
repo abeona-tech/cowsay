@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'MesloLGS';
-  src: url('../src/MesloLGS NF Regular.ttf') format('truetype');
+  src: url('../src/MesloLGSDZ-Regular.ttf') format('truetype');
+  /* src: url('../src/MesloLGS NF Regular.ttf') format('truetype'); */
   font-weight: 200 900;
   font-display: swap;
 }
@@ -9,14 +10,6 @@ body {
   background-color: black;
   padding-left: 2rem;
   font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  font-family: 'MesloLGS', monospace;
-  font-optical-sizing: auto;
-  font-style: normal;
-
   height: 100%;
   margin: 0;
   padding: 0;
@@ -35,6 +28,13 @@ body {
 pre {
   margin: 0; /* Remove default margin */
   font-family: 'MesloLGS', monospace;
-  font-size: 1.33rem;
-  transform: translateY(-1rem);
+  font-size: 3.5rem;
+  transform: translateY(-2rem);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  letter-spacing: 1;
 }

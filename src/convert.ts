@@ -30,8 +30,8 @@ nodeHtmlToImage({
   html,
   puppeteerArgs: {
     defaultViewport: {
-      width: 600, // Set the width of the image
-      height: 300, // Set the height of the image
+      width: 1600, // Set the width of the image
+      height: 900, // Set the height of the image
     },
   },
 })

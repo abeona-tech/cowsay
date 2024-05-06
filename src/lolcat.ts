@@ -5,7 +5,8 @@ const text = fs.readFileSync('dist/quote.txt', 'utf8')
 fs.writeFileSync('./dist/temp.txt', text)
 
 let output = ''
-const ptyProcess = spawn('npx', ['lolcatjs', 'dist/temp.txt'], {})
+const seed = Math.floor(Math.random() * 1000)
+const ptyProcess = spawn('npx', ['lolcatjs', '--seed', seed.toString(), 'dist/temp.txt'], {})
 
 ptyProcess.onData((data) => {
   output += data
