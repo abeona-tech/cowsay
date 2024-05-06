@@ -36,5 +36,5 @@ pre {
   margin: 0; /* Remove default margin */
   font-family: 'MesloLGS', monospace;
   font-size: 1.33rem;
-  transform: translateY(-0.25rem);
+  transform: translateY(-1rem);
 }

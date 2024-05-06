@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rm -rf dist/**.*",
     "compile": "tsc",
-    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert",
+    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert && npm run tweet",
     "convert": "node dist/convert.js",
     "say": "node dist/say.js",
     "lolcat": "cat dist/quote.txt | lolcat --force > ./dist/lolcat.ansi",
@@ -24,6 +24,7 @@
     "@types/node": "^20.12.2",
     "ansi-to-html": "^0.7.2",
     "cowsay": "^1.6.0",
+    "dotenv": "^16.4.5",
     "jsdom": "^24.0.0",
     "node-html-to-image": "^4.0.0",
     "twitter-api-v2": "^1.16.3",
