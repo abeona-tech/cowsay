@@ -15,7 +15,6 @@ const rwClient = client.readWrite
 async function uploadMedia(filePath: string): Promise<string> {
   try {
     const mediaData = await rwClient.v1.uploadMedia(filePath, { mimeType: 'image/jpeg' })
-    console.log('🚀 ~ uploadMedia ~ mediaData:', mediaData)
     return mediaData
   } catch (error) {
     console.error('Could not upload media:', error)
@@ -38,7 +37,6 @@ async function postTweetWithImage(message: string, imagePath: string): Promise<v
   try {
     const mediaId = await uploadMedia(imagePath)
     const tweet = await rwClient.v2.tweet(message, { media: { media_ids: [mediaId] } })
-    console.log('Tweeted:', tweet.data)
   } catch (error) {
     console.error('Could not post tweet:', error)
   }

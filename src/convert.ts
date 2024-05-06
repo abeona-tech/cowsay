@@ -29,9 +29,9 @@ nodeHtmlToImage({
   puppeteerArgs: {
     defaultViewport: {
       width: 900, // Set the width of the image
-      height: 600, // Set the height of the image
+      height: 400, // Set the height of the image
     },
   },
 })
-  .then(() => console.log('The image was created successfully!'))
+  .then()
   .catch((error) => console.error('oops, something went wrong!', error))
