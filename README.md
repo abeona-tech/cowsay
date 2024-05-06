@@ -1,12 +1,14 @@
 Cowsay Application
-___
-
-![Cowsay](./src/profile%20pic.png) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/meowso/cowsay) ![GitHub top language](https://img.shields.io/github/languages/top/meowso/cowsay) ![GitHub last commit](https://img.shields.io/github/last-commit/meowso/cowsay) ![GitHub issues](https://img.shields.io/github/issues/meowso/cowsay) ![GitHub pull requests](https://img.shields.io/github/issues-pr/meowso/cowsay) ![GitHub stars](https://img.shields.io/github/stars/meowso/cowsay?style=social) ![GitHub forks](https://img.shields.io/github/forks/meowso/cowsay?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/meowso/cowsay?style=social) ![GitHub followers](https://img.shields.io/github/followers/brunopalma?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/m3auso?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/cowsayco?style=social)
+---
 
 This project is a simple implementation of the classic command-line program `cowsay` that tweets a quote a day.
 
+![Cowsay](./src/profile%20pic.png) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/meowso/cowsay) ![GitHub top language](https://img.shields.io/github/languages/top/meowso/cowsay) ![GitHub last commit](https://img.shields.io/github/last-commit/meowso/cowsay) ![GitHub issues](https://img.shields.io/github/issues/meowso/cowsay) ![GitHub pull requests](https://img.shields.io/github/issues-pr/meowso/cowsay) ![GitHub stars](https://img.shields.io/github/stars/meowso/cowsay?style=social) ![GitHub forks](https://img.shields.io/github/forks/meowso/cowsay?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/meowso/cowsay?style=social) ![GitHub followers](https://img.shields.io/github/followers/brunopalma?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/m3auso?style=social) ![Twitter Follow](https://img.shields.io/twitter/follow/cowsayco?style=social)
+
+---
 **Table of Contents**
 
+- [Cowsay Application](#cowsay-application)
 - [Installation](#installation)
 - [Scripts](#scripts)
 - [Dependencies](#dependencies)
