@@ -1,0 +1,23 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Scheduled Deployment
+
+# Controls when the workflow will run
+on:
+  schedule:
+    # Triggers the workflow at 5 PM CET every weekday
+    - cron: '0 16 * * 1-5'  # UTC time for 5 PM CET
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a command using the runners shell to trigger deployment
+      - name: Trigger Deployment
+        run: |
+          curl -X POST 'https://api.render.com/deploy/srv-cosfupi1hbls73fkanpg?key=JZNn_8s9gAU'
