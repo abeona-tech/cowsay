@@ -8,9 +8,9 @@
   "scripts": {
     "clean": "rm -rf dist/**.*",
     "compile": "tsc",
-    "start": "npm run clean && npm run compile && npm run say && npm run cowsay",
+    "start": "npm run clean && npm run compile && npm run say && npm run lolcat",
     "say": "node dist/say.js",
-    "cowsay": "node dist/cowsay.js",
+    "lolcat": "cat dist/quote.txt | lolcat",
     "tweet": "node dist/tweet.js"
   },
   "keywords": [
@@ -20,14 +20,12 @@
   "author": "Bruno Palma",
   "license": "MIT",
   "dependencies": {
-    "@darkobits/lolcatjs": "^3.1.5",
     "cowsay": "^1.6.0",
-    "lolcatjs": "^2.4.3",
     "twitter-api-v2": "^1.16.3",
-    "word-wrap": "^1.2.5"
+    "word-wrap": "^1.2.5",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@types/lolcatjs": "^2.4.1",
     "@types/node": "^20.12.8"
   }
 }

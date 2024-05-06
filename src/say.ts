@@ -27,4 +27,4 @@ const wrappedQuote = wrap(randomQuote, {
 const message = cowsay.say({ text: wrappedQuote })
 
 // Print the message to a file in rich text format
-fs.writeFileSync(path.join(distDir, 'quote.txt'), message)
+fs.writeFileSync(path.join(distDir, 'quote.txt'), message + '\n')
