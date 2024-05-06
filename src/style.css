@@ -1,8 +1,27 @@
 body {
     background-color: black;
+    padding-left: 2rem;
     font-family: monospace;
     font-size: 2rem;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+}
+
+pre {
+    margin: 0; /* Remove default margin */
 }

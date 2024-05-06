@@ -17,7 +17,7 @@ let html = convert.toHtml(ansiString)
 let css = fs.readFileSync(path.join(srcDir, 'style.css'), 'utf-8')
 
 // Add CSS to the HTML
-html = '<style>' + css + '</style>' + '<pre>' + html + '</pre>'
+html = '<style>' + css + '</style>' + '<div class="container"><pre>' + html + '</pre></div>'
 
 // Write the HTML to dist/cowsay.html
 fs.writeFileSync(path.join(__dirname, 'cowsay.html'), html)
