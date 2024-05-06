@@ -16,9 +16,11 @@ let html = convert.toHtml(ansiString)
 // Read the CSS from style.css
 let css = fs.readFileSync(path.join(srcDir, 'style.css'), 'utf-8')
 
-// Add CSS to the HTML
-html = '<style>' + css + '</style>' + '<div class="container"><pre>' + html + '</pre></div>'
-
+// Add CSS and external links to the HTML
+html = `
+  <style>${css}</style>
+  <div class="container"><pre>${html}</pre></div>
+`
 // Write the HTML to dist/cowsay.html
 fs.writeFileSync(path.join(__dirname, 'cowsay.html'), html)
 
@@ -28,8 +30,8 @@ nodeHtmlToImage({
   html,
   puppeteerArgs: {
     defaultViewport: {
-      width: 900, // Set the width of the image
-      height: 400, // Set the height of the image
+      width: 599, // Set the width of the image
+      height: 330, // Set the height of the image
     },
   },
 })

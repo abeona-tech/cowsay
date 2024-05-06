@@ -1,27 +1,40 @@
-body {
-    background-color: black;
-    padding-left: 2rem;
-    font-family: monospace;
-    font-size: 2rem;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'MesloLGS';
+  src: url('../src/MesloLGS NF Regular.ttf') format('truetype');
+  font-weight: 200 900;
+  font-display: swap;
+}
 
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+  background-color: black;
+  padding-left: 2rem;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'MesloLGS', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
 }
 
 pre {
-    margin: 0; /* Remove default margin */
+  margin: 0; /* Remove default margin */
+  font-family: 'MesloLGS', monospace;
+  font-size: 1.33rem;
+  transform: translateY(-0.25rem);
 }
