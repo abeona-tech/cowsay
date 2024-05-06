@@ -3,8 +3,12 @@ import * as fs from 'fs'
 import * as path from 'path'
 import wrap from 'word-wrap'
 
+// Define the path to the dist directory
+const distDir = path.resolve(__dirname, '..', 'dist')
+const srcDir = path.resolve(__dirname, '..', 'src')
+
 // Read the quotes from the JSON file
-const quotes: string[] = JSON.parse(fs.readFileSync(path.join(__dirname, 'tech_quotes.json'), 'utf-8'))
+const quotes: string[] = JSON.parse(fs.readFileSync(path.join(srcDir, 'tech_quotes.json'), 'utf-8'))
 
 // Pick a random quote
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
@@ -23,4 +27,4 @@ const wrappedQuote = wrap(randomQuote, {
 const message = cowsay.say({ text: wrappedQuote })
 
 // Print the message to a file in rich text format
-fs.writeFileSync(path.join(__dirname, 'quote.txt'), message)
+fs.writeFileSync(path.join(distDir, 'quote.txt'), message)

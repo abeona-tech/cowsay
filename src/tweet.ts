@@ -44,4 +44,8 @@ async function postTweetWithImage(message: string, imagePath: string): Promise<v
   }
 }
 
-postTweetWithImage('Hello world!', 'quote.png')
+const hashtags = ['#Coding', '#Developers', '#Programming', '#DevHumor']
+
+const hashtagString = hashtags.join(' ')
+
+postTweetWithImage(hashtagString, './dist/quote.png')
