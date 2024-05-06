@@ -5,11 +5,10 @@
   "engines": {
     "node": "20.12.2"
   },
-  "main": "index.js",
   "scripts": {
-    "compile": "tsc",
     "clean": "rm -rf dist/**.*",
-    "start": "node index.js",
+    "compile": "tsc",
+    "start": "npm run clean && npm run compile && npm run say && npm run cowsay",
     "say": "node dist/say.js",
     "cowsay": "node dist/cowsay.js",
     "tweet": "node dist/tweet.js"
@@ -22,15 +21,13 @@
   "license": "MIT",
   "dependencies": {
     "@darkobits/lolcatjs": "^3.1.5",
-    "carbon-now-cli": "^2.0.0",
-    "color-name-list": "^10.22.0",
     "cowsay": "^1.6.0",
-    "isomorphic-lolcat": "^0.3.0",
-    "twitter-api-client": "^1.6.1",
+    "lolcatjs": "^2.4.3",
     "twitter-api-v2": "^1.16.3",
     "word-wrap": "^1.2.5"
   },
   "devDependencies": {
+    "@types/lolcatjs": "^2.4.1",
     "@types/node": "^20.12.8"
   }
 }
