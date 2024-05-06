@@ -6,7 +6,9 @@ name: Scheduled Deployment
 on:
   schedule:
     # Triggers the workflow at 5 PM CET every weekday
-    - cron: '0 16 * * 1-5'  # UTC time for 5 PM CET
+    - cron: '*/5 * * * *' # Runs every 5 minutes
+
+    # - cron: '0 16 * * 1-5'  # UTC time for 5 PM CET
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
