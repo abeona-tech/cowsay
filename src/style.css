@@ -1,0 +1,8 @@
+body {
+    background-color: black;
+    font-family: monospace;
+    font-size: 2rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

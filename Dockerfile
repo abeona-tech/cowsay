@@ -14,17 +14,19 @@ RUN npm install
 COPY tsconfig.json ./
 COPY src ./src
 
+# Make the script executable
+RUN chmod +x ./src/screenshot.sh
+
 # Create the dist directory
 RUN mkdir -p ./dist
 
-# Install zsh
-RUN apt-get update && apt-get install -y zsh
-
-# Install Ruby and lolcat
-RUN apt-get install -y ruby && gem install lolcat
+# Install necessary tools
+RUN apt-get update && apt-get install -y zsh ruby imagemagick xdotool x11-apps && gem install lolcat
 
 # Change the default shell to zsh
 SHELL ["/bin/zsh", "-c"]
 
 # Define the command to run the application
 CMD npm run start
+
+

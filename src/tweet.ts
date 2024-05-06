@@ -48,4 +48,4 @@ const hashtags = ['#Coding', '#Developers', '#Programming', '#DevHumor']
 
 const hashtagString = hashtags.join(' ')
 
-postTweetWithImage(hashtagString, './dist/quote.png')
+postTweetWithImage(hashtagString, './dist/cowsay-quote.png')
