@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A simple cowsay application",
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.12.2"
   },
   "scripts": {
     "cowsay": "node ./node_modules/carbon-now-cli/dist/cli.js quote.txt -l -w 800 -h 400 -t png --save-as quote -p presentation --config .carbon-now.json",
