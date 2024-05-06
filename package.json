@@ -2,7 +2,9 @@
   "name": "cowsay",
   "version": "1.0.0",
   "description": "A simple cowsay application",
-  "main": "index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "cowsay": "node ./node_modules/carbon-now-cli/dist/cli.js quote.txt -l -w 800 -h 400 -t png --save-as quote -p presentation --config .carbon-now.json",
     "start": "ts-node say.ts && npm run cowsay",
