@@ -40,7 +40,18 @@ async function postTweetWithImage(message: string, imagePath: string): Promise<v
   }
 }
 
-const hashtags = ['#tech', '#dev', '#memes', '#devjokes', '#devmemes', '#devhumor', '#codingjokes', '#codinglife']
+const hashtags = [
+  '#tech',
+  '#dev',
+  '#memes',
+  '#coding',
+  '#developer',
+  '#devjokes',
+  '#devmemes',
+  '#devhumor',
+  '#codingjokes',
+  '#codinglife',
+]
 
 const hashtagString = hashtags.join(' ')
 
