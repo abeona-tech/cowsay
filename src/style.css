@@ -28,7 +28,7 @@ body {
 pre {
   margin: 0; /* Remove default margin */
   font-family: 'MesloLGS', monospace;
-  font-size: 2.75rem;
+  font-size: 2.65rem;
   transform: translateY(-2rem);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
