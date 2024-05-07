@@ -13,7 +13,6 @@ const quotes: string[] = JSON.parse(fs.readFileSync(path.join(srcDir, 'tech_quot
 // Pick a random quote
 const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
 
-// Wrap the text at 120 characters
 const wrappedQuote = wrap(randomQuote, {
   width: 40,
   indent: '',
