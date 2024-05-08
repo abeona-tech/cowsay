@@ -45,7 +45,6 @@ const hashtags = [
   '#dev',
   '#coding',
   '#memes',
-  '#humor',
   '#jokes',
   '#developers',
   '#devjokes',
