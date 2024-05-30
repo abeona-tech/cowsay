@@ -2,8 +2,7 @@ name: Daily 5pm tweet
 
 on:
   schedule:
-    - cron: '20 16 * * 1-5'
-    - cron: '0 9 * * 1-5'
+    - cron: '20 16 * * *'
 
 jobs:
   deploy:

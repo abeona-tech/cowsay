@@ -5,34 +5,25 @@ We've been curating quotes from the internet for a while.
 
 ![Twitter Follow](https://img.shields.io/twitter/follow/cowsayco?style=social)
 
-![Cowsay](./src/profile%20pic.png) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/meowso/cowsay) ![GitHub top language](https://img.shields.io/github/languages/top/meowso/cowsay) ![GitHub last commit](https://img.shields.io/github/last-commit/meowso/cowsay) ![GitHub issues](https://img.shields.io/github/issues/meowso/cowsay) ![GitHub pull requests](https://img.shields.io/github/issues-pr/meowso/cowsay)
+![Cowsay - I see dead code image](./src/profile%20pic.png) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub repo size](https://img.shields.io/github/repo-size/meowso/cowsay) ![GitHub top language](https://img.shields.io/github/languages/top/meowso/cowsay) ![GitHub last commit](https://img.shields.io/github/last-commit/meowso/cowsay) ![GitHub issues](https://img.shields.io/github/issues/meowso/cowsay) ![GitHub pull requests](https://img.shields.io/github/issues-pr/meowso/cowsay)
 
 ---
-
-- [Cowsay Twitter Bot](#cowsay-twitter-bot)
-  - [Installation](#installation)
-  - [Scripts](#scripts)
-  - [Dependencies](#dependencies)
-  - [Author](#author)
-  - [Contributing](#contributing)
-  - [License](#license)
 
 ## Installation
 
 ```bash
 npm install
-npm run start
 ```
 
 ## Scripts
 
-**npm run clean:** Removes the dist directory.
-**npm run compile:** Compiles the TypeScript files.
-**npm run start:** Runs the clean, compile, say, lolcat, convert, and tweet scripts in order.
-**npm run convert:** Runs the convert.js script.
-**npm run say:** Runs the say.js script.
-**npm run lolcat:** Runs the lolcat.js script and outputs to lolcat.ansi.
-**npm run tweet:** Runs the tweet.js script.
+- **npm run clean:** Removes the dist directory.
+- **npm run compile:** Compiles the TypeScript files.
+- **npm run start:** Runs the clean, compile, say, lolcat, convert, and tweet scripts in order.
+- **npm run convert:** Runs the convert.js script.
+- **npm run say:** Runs the say.js script.
+- **npm run lolcat:** Runs the lolcat.js script and outputs to lolcat.ansi.
+- **npm run tweet:** Runs the tweet.js script.
 
 ## Dependencies
 
@@ -47,6 +38,10 @@ npm run start
 - word-wrap: ^1.2.5
 - @types/node: ^20.12.2
 - @types/lolcatjs: ^2.4.1
+
+## Website
+
+Check our website [cowsay.co](https://cowsay.co).
 
 ## Author
 
