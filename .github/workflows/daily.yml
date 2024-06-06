@@ -1,8 +1,8 @@
-name: Daily 5pm tweet
+name: Daily tweet
 
 on:
   schedule:
-    - cron: '20 16 * * *'
+    - cron: "20 16 * * *"
 
 jobs:
   deploy:
@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Trigger Deployment
         run: |
-          curl -X POST 'https://api.render.com/deploy/srv-cosfupi1hbls73fkanpg?key=JZNn_8s9gAU'
+          curl -X POST 'https://api.render.com/deploy/srv-cosfupi1hbls73fkanpg?key=vLGaaTAn1d8'
