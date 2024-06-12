@@ -12,7 +12,7 @@
   "scripts": {
     "clean": "rm -rf dist/**.*",
     "compile": "tsc",
-    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert && npm run tweet",
+    "start": "npm run clean && npm run compile && npm run say && npm run lolcat && npm run convert && npm run tweet ",
     "convert": "node dist/convert.js",
     "say": "node dist/say.js",
     "lolcat": "node dist/lolcat.js > ./dist/lolcat.ansi",
