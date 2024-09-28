@@ -36,15 +36,27 @@ jobs:
           export-env: true
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          TWITTER_API_KEY: op://abeona/cowsay-bot/TWITTER_ACCESS_SECRET
-          TWITTER_API_SECRET: op://abeona/cowsay-bot/TWITTER_ACCESS_TOKEN
-          TWITTER_ACCESS_TOKEN: op://abeona/cowsay-bot/TWITTER_APP_KEY
-          TWITTER_ACCESS_SECRET: op://abeona/cowsay-bot/TWITTER_APP_SECRET
+          TWITTER_APP_KEY: op://abeona/cowsay-bot/TWITTER_APP_KEY
+          TWITTER_APP_SECRET: op://abeona/cowsay-bot/TWITTER_APP_SECRET
+          TWITTER_ACCESS_TOKEN: op://abeona/cowsay-bot/TWITTER_ACCESS_TOKEN
+          TWITTER_ACCESS_SECRET: op://abeona/cowsay-bot/TWITTER_ACCESS_SECRET
+
+      - name: Debug environment variables
+        run: |
+          echo "TWITTER_APP_KEY: ${TWITTER_APP_KEY:0:4}..."
+          echo "TWITTER_APP_SECRET: ${TWITTER_APP_SECRET:0:4}..."
+          echo "TWITTER_ACCESS_TOKEN: ${TWITTER_ACCESS_TOKEN:0:4}..."
+          echo "TWITTER_ACCESS_SECRET: ${TWITTER_ACCESS_SECRET:0:4}..."
+        env:
+          TWITTER_APP_KEY: ${{ env.TWITTER_APP_KEY }}
+          TWITTER_APP_SECRET: ${{ env.TWITTER_APP_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ env.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ env.TWITTER_ACCESS_SECRET }}
 
       - name: Generate and post tweet
         run: npm run start
         env:
-          TWITTER_API_KEY: ${{ env.TWITTER_API_KEY }}
-          TWITTER_API_SECRET: ${{ env.TWITTER_API_SECRET }}
+          TWITTER_APP_KEY: ${{ env.TWITTER_APP_KEY }}
+          TWITTER_APP_SECRET: ${{ env.TWITTER_APP_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ env.TWITTER_ACCESS_TOKEN }}
           TWITTER_ACCESS_SECRET: ${{ env.TWITTER_ACCESS_SECRET }}
