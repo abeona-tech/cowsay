@@ -3,12 +3,18 @@ import { TwitterApi } from 'twitter-api-v2'
 import dotenv from 'dotenv'
 dotenv.config()
 
+// Log partial information about the tokens
+console.log('TWITTER_APP_KEY:', process.env.TWITTER_APP_KEY?.substring(0, 4) + '...')
+console.log('TWITTER_APP_SECRET:', process.env.TWITTER_APP_SECRET?.substring(0, 4) + '...')
+console.log('TWITTER_ACCESS_TOKEN:', process.env.TWITTER_ACCESS_TOKEN?.substring(0, 4) + '...')
+console.log('TWITTER_ACCESS_SECRET:', process.env.TWITTER_ACCESS_SECRET?.substring(0, 4) + '...')
+
 // Twitter API credentials
 const client = new TwitterApi({
-  appKey: process.env.TWITTER_APP_KEY,
-  appSecret: process.env.TWITTER_APP_SECRET,
-  accessToken: process.env.TWITTER_ACCESS_TOKEN,
-  accessSecret: process.env.TWITTER_ACCESS_SECRET,
+  appKey: process.env.TWITTER_APP_KEY || '',
+  appSecret: process.env.TWITTER_APP_SECRET || '',
+  accessToken: process.env.TWITTER_ACCESS_TOKEN || '',
+  accessSecret: process.env.TWITTER_ACCESS_SECRET || '',
 })
 
 // This is the client that can interact with the Twitter API
