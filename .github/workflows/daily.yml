@@ -23,10 +23,10 @@ jobs:
           export-env: true
         env:
           OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
-          TWITTER_API_KEY: op://abeona/twitter-secrets/API_KEY
-          TWITTER_API_SECRET: op://abeona/twitter-secrets/API_SECRET
-          TWITTER_ACCESS_TOKEN: op://abeona/twitter-secrets/ACCESS_TOKEN
-          TWITTER_ACCESS_SECRET: op://abeona/twitter-secrets/ACCESS_SECRET
+          TWITTER_API_KEY: op://abeona/twitter-secrets/TWITTER_ACCESS_SECRET
+          TWITTER_API_SECRET: op://abeona/twitter-secrets/TWITTER_ACCESS_TOKEN
+          TWITTER_ACCESS_TOKEN: op://abeona/twitter-secrets/TWITTER_APP_KEY
+          TWITTER_ACCESS_SECRET: op://abeona/twitter-secrets/TWITTER_APP_SECRET
 
       - name: Install dependencies
         run: npm ci
