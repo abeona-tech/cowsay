@@ -11,6 +11,9 @@ on:
 jobs:
   tweet:
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/puppeteer/puppeteer:20.9.0
+      options: --shm-size=1gb
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,7 +38,7 @@ jobs:
         run: npm ci
 
       - name: Generate and post tweet
-        run: NODE_OPTIONS=--no-sandbox npm run start
+        run: npm run start
         env:
           TWITTER_API_KEY: ${{ env.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ env.TWITTER_API_SECRET }}
