@@ -29,11 +29,13 @@ nodeHtmlToImage({
   output: path.join(__dirname, `cowsay-quote.png`),
   html,
   puppeteerArgs: {
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    headless: true,  // Use boolean true instead of "new"
     defaultViewport: {
-      width: 1600 * 0.75, // Set the width of the image
-      height: 900 * 0.75, // Set the height of the image
+      width: 1600 * 0.75,
+      height: 900 * 0.75,
     },
   },
 })
-  .then()
+  .then(() => console.log('The image was created successfully!'))
   .catch((error) => console.error('oops, something went wrong!', error))
