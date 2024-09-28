@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Generate and post tweet
-        run: npm run start
+        run: NODE_OPTIONS=--no-sandbox npm run start
         env:
           TWITTER_API_KEY: ${{ env.TWITTER_API_KEY }}
           TWITTER_API_SECRET: ${{ env.TWITTER_API_SECRET }}
