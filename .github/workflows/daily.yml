@@ -1,6 +1,9 @@
 name: Daily tweet
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "20 16 * * *"
   workflow_dispatch:
