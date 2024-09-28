@@ -35,14 +35,14 @@
     "cowsay": "^1.6.0",
     "dotenv": "^16.4.5",
     "lolcatjs": "^2.4.3",
-    "node-html-to-image": "^4.0.0",
+    "node-html-to-image": "^5.0.0",
     "node-pty": "^1.0.0",
-    "twitter-api-v2": "^1.16.3",
-    "typescript": "^5.4.5",
+    "twitter-api-v2": "^1.17.2",
+    "typescript": "^5.6.2",
     "word-wrap": "^1.2.5"
   },
   "devDependencies": {
-    "@types/node": "^20.12.2",
+    "@types/node": "^22.7.4",
     "@types/lolcatjs": "^2.4.1"
   }
 }
