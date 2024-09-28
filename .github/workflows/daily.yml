@@ -5,9 +5,35 @@ on:
     - cron: "20 16 * * *"
 
 jobs:
-  deploy:
+  tweet:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Deployment
-        run: |
-          curl -X POST 'https://api.render.com/deploy/srv-cosfupi1hbls73fkanpg?key=vLGaaTAn1d8'
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Load secrets from 1Password
+        uses: 1password/load-secrets-action@v1
+        with:
+          export-env: true
+        env:
+          OP_SERVICE_ACCOUNT_TOKEN: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+          TWITTER_API_KEY: op://path/to/twitter-secrets/API_KEY
+          TWITTER_API_SECRET: op://path/to/twitter-secrets/API_SECRET
+          TWITTER_ACCESS_TOKEN: op://path/to/twitter-secrets/ACCESS_TOKEN
+          TWITTER_ACCESS_SECRET: op://path/to/twitter-secrets/ACCESS_SECRET
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate and post tweet
+        run: npm run start
+        env:
+          TWITTER_API_KEY: ${{ env.TWITTER_API_KEY }}
+          TWITTER_API_SECRET: ${{ env.TWITTER_API_SECRET }}
+          TWITTER_ACCESS_TOKEN: ${{ env.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_SECRET: ${{ env.TWITTER_ACCESS_SECRET }}

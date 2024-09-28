@@ -2,9 +2,6 @@
   "name": "cowsay",
   "version": "1.0.0",
   "description": "A simple cowsay application",
-  "engines": {
-    "node": "20.12.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/meowso/cowsay"
@@ -16,7 +13,8 @@
     "convert": "node dist/convert.js",
     "say": "node dist/say.js",
     "lolcat": "node dist/lolcat.js > ./dist/lolcat.ansi",
-    "tweet": "node dist/tweet.js"
+    "tweet": "node dist/tweet.js",
+    "local": "bash tweet_local.sh"
   },
   "keywords": [
     "cowsay",

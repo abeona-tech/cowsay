@@ -93,3 +93,5 @@ dist
 quote.png
 quote.txt
 .DS_Store
+
+venv/
