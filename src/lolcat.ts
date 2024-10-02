@@ -13,7 +13,15 @@ ptyProcess.onData((data) => {
 })
 
 ptyProcess.onExit(() => {
+  // Remove the cursor show sequence
   output = output.replace(/\x1b\[\?25h/g, '')
+
+  // Trim the "GG" and any associated control characters at the end
+  output = output.replace(/\x1b\[1G\x1b\[0K.\x1b\[1G\x1b\[0K$/g, '')
+
+  // Trim any trailing whitespace
+  output = output.trim()
+
   fs.writeFileSync('./dist/lolcat.ansi', output)
   fs.unlinkSync('./dist/temp.txt')
 })
