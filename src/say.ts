@@ -3,15 +3,28 @@ import * as fs from 'fs'
 import * as path from 'path'
 import wrap from 'word-wrap'
 
-// Define the path to the dist directory
 const distDir = path.resolve(__dirname, '..', 'dist')
 const srcDir = path.resolve(__dirname, '..', 'src')
 
-// Read the quotes from the JSON file
 const quotes: string[] = JSON.parse(fs.readFileSync(path.join(srcDir, 'tech_quotes.json'), 'utf-8'))
 
-// Pick a random quote
-const randomQuote = quotes[Math.floor(Math.random() * quotes.length)]
+const usedQuotesFile = path.join(srcDir, 'used_quotes.json')
+let usedQuotes: string[] = []
+if (fs.existsSync(usedQuotesFile)) {
+  usedQuotes = JSON.parse(fs.readFileSync(usedQuotesFile, 'utf-8'))
+}
+
+const availableQuotes = quotes.filter(quote => !usedQuotes.includes(quote))
+
+if (availableQuotes.length === 0) {
+  usedQuotes = []
+  availableQuotes.push(...quotes)
+}
+
+const randomQuote = availableQuotes[Math.floor(Math.random() * availableQuotes.length)]
+
+usedQuotes.push(randomQuote)
+fs.writeFileSync(usedQuotesFile, JSON.stringify(usedQuotes, null, 2))
 
 const wrappedQuote = wrap(randomQuote, {
   width: 40,
@@ -22,8 +35,6 @@ const wrappedQuote = wrap(randomQuote, {
   escape: (str: string) => str,
 })
 
-// Generate the cowsay message
 const message = cowsay.say({ text: wrappedQuote })
 
-// Print the message to a file in rich text format
 fs.writeFileSync(path.join(distDir, 'quote.txt'), message + '\n')

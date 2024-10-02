@@ -66,3 +66,11 @@ jobs:
           TWITTER_APP_SECRET: ${{ env.TWITTER_APP_SECRET }}
           TWITTER_ACCESS_TOKEN: ${{ env.TWITTER_ACCESS_TOKEN }}
           TWITTER_ACCESS_SECRET: ${{ env.TWITTER_ACCESS_SECRET }}
+
+      - name: Commit used quotes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/used_quotes.json
+          git commit -m "Update used quotes" || echo "No changes to commit"
+          git push
