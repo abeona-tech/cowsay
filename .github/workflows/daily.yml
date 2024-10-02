@@ -5,7 +5,13 @@ on:
     branches:
       - main
   schedule:
-    - cron: "20 16 * * *"
+    - cron: "0 15-21 * * 1"  # Monday: 3 PM - 9 PM
+    - cron: "0 15-22 * * 2"  # Tuesday: 3 PM - 10 PM
+    - cron: "0 16-17 * * 3"  # Wednesday: 4 PM - 5 PM
+    - cron: "0 16-20 * * 4"  # Thursday: 4 PM - 8 PM
+    - cron: "0 18-20 * * 5"  # Friday: 6 PM - 8 PM
+    - cron: "0 13-17 * * 6"  # Saturday: 1 PM - 5 PM
+    - cron: "0 2-4 * * 0"    # Sunday: 2 AM - 4 AM
   workflow_dispatch:
 
 jobs:
