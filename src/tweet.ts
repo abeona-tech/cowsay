@@ -23,7 +23,6 @@ async function uploadMedia(filePath: string): Promise<string> {
 }
 
 async function postTweetWithImage(message: string, imagePath: string): Promise<void> {
-  return
   try {
     const mediaId = await uploadMedia(imagePath)
     const tweet = await rwClient.v2.tweet(message, { media: { media_ids: [mediaId] } })
