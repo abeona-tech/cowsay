@@ -7,30 +7,24 @@ const convert = new Convert({ newline: true })
 
 const srcDir = path.resolve(__dirname, '..', 'src')
 
-// Read the ANSI string from src/quote.txt
 let ansiString = fs.readFileSync(path.join(__dirname, 'lolcat.ansi'), 'utf-8')
 
-// Convert ANSI to HTML
 let html = convert.toHtml(ansiString)
 
-// Read the CSS from style.css
 let css = fs.readFileSync(path.join(srcDir, 'style.css'), 'utf-8')
 
-// Add CSS and external links to the HTML
 html = `
   <style>${css}</style>
   <div class="container"><pre>${html}</pre></div>
 `
-// Write the HTML to dist/cowsay.html
 fs.writeFileSync(path.join(__dirname, 'cowsay.html'), html)
 
-// Convert HTML to PNG
 nodeHtmlToImage({
   output: path.join(__dirname, `cowsay-quote.png`),
   html,
   puppeteerArgs: {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    headless: true,  // Use boolean true instead of "new"
+    headless: true,
     defaultViewport: {
       width: 1600 * 0.75,
       height: 900 * 0.75,

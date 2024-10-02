@@ -3,13 +3,6 @@ import { TwitterApi } from 'twitter-api-v2'
 import dotenv from 'dotenv'
 dotenv.config()
 
-// Log partial information about the tokens
-console.log('TWITTER_APP_KEY:', process.env.TWITTER_APP_KEY?.substring(0, 4) + '...')
-console.log('TWITTER_APP_SECRET:', process.env.TWITTER_APP_SECRET?.substring(0, 4) + '...')
-console.log('TWITTER_ACCESS_TOKEN:', process.env.TWITTER_ACCESS_TOKEN?.substring(0, 4) + '...')
-console.log('TWITTER_ACCESS_SECRET:', process.env.TWITTER_ACCESS_SECRET?.substring(0, 4) + '...')
-
-// Twitter API credentials
 const client = new TwitterApi({
   appKey: process.env.TWITTER_APP_KEY || '',
   appSecret: process.env.TWITTER_APP_SECRET || '',
@@ -17,30 +10,23 @@ const client = new TwitterApi({
   accessSecret: process.env.TWITTER_ACCESS_SECRET || '',
 })
 
-// This is the client that can interact with the Twitter API
 const rwClient = client.readWrite
 
-// Function to upload an image and return the media ID
 async function uploadMedia(filePath: string): Promise<string> {
   try {
     const mediaData = await rwClient.v1.uploadMedia(filePath, { mimeType: 'image/jpeg' })
     return mediaData
   } catch (error) {
     console.error('Could not upload media:', error)
-    throw error // Rethrow to handle in the calling function
+    throw error
   }
 }
 
-// Function to post a tweet with an image
 async function postTweetWithImage(message: string, imagePath: string): Promise<void> {
-  // only if .env TWEET is true
-  if (process.env.TWEET !== 'true') {
-    console.log('Tweeting is disabled')
-    return
-  }
   try {
     const mediaId = await uploadMedia(imagePath)
     const tweet = await rwClient.v2.tweet(message, { media: { media_ids: [mediaId] } })
+    console.log('Tweet posted:', tweet)
   } catch (error) {
     console.error('Could not post tweet:', error)
   }
