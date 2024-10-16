@@ -47,5 +47,6 @@
   "JavaScript logic: 0 == \"0\" and 0 == []; therefore, \"0\" != []",
   "Sometimes it pays to stay in bed on Monday, rather than spending the rest of the week debugging Monday's code. - Christopher Thompson",
   "One of my most productive days was throwing away 1,000 lines of code. - Ken Thompson",
-  "Less code equals less bugs. - Kevlin Henney"
+  "Less code equals less bugs. - Kevlin Henney",
+  "Programming is like sex: one mistake and you have to support it for the rest of your life."
 ]
