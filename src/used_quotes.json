@@ -53,5 +53,6 @@
   "Russian roulette: [ $[ $RANDOM",
   "Why don't programmers like nature? Too many bugs.",
   "Vim users never exit... they just :q!",
-  "Good design adds value faster than it adds cost. - Thomas C. Gale"
+  "Good design adds value faster than it adds cost. - Thomas C. Gale",
+  "In C we had to code our own bugs. In C++ we can inherit them."
 ]
