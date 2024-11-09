@@ -118,5 +118,6 @@
   "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
   "A user interface is like a joke. If you have to explain it, it's not that good.",
   "The evolution of languages: FORTRAN is a nontyped language. C is a weakly typed language. Ada is a strongly typed language. C++ is a strongly hyped language.",
-  "6 ] == 0 ] && rm -rf / || echo *Click*"
+  "6 ] == 0 ] && rm -rf / || echo *Click*",
+  "There are only two hard things in computer science: cache invalidation and naming things."
 ]
