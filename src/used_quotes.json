@@ -163,5 +163,6 @@
   "Q: If 1 is true and 0 is false? A: 1.",
   "The best thing about a boolean is even if you are wrong, you are only off by a bit.",
   "Why do programmers prefer dark mode? Light attracts bugs.",
-  "TypeScript: Because sometimes, any just isn't good enough."
+  "TypeScript: Because sometimes, any just isn't good enough.",
+  "Why do React developers prefer functional components? Because they're stateless!"
 ]
